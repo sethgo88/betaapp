@@ -1,0 +1,28 @@
+{
+  [
+    {
+      name: "route 1",
+      type: "boulder",
+      grade: "v4",
+      id: "0001",
+    },
+    {
+      name: "route 2",
+      type: "sport",
+      grade: "5.12a",
+      id: "0002",
+    },
+    {
+      name: "route 3",
+      type: "sport",
+      grade: "5.11b",
+      id: "0003",
+    },
+    {
+      name: "route 4",
+      type: "boulder",
+      grade: "v7",
+      id: "0004",
+    },
+  ];
+}
