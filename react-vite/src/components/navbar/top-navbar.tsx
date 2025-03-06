@@ -2,10 +2,11 @@ import { useState } from "react";
 import { NavLink, useLocation } from "react-router";
 import { twMerge } from "tailwind-merge";
 import { RxCaretLeft } from "react-icons/rx";
+import { AddNewRoute } from "../add-new-route/add-new-route";
 
 const getLocationBackMap = (location: string) => {
   const locationMap: { [key: string]: string } = {
-    route: "/",
+    routes: "/",
   };
   return locationMap[location];
 };
@@ -22,7 +23,10 @@ export const TopNavBar = () => {
             Beta App
           </NavLink>
         </div>
-        <div className="relative h-[37px] w-[37px] rounded-sm border border-white" onClick={() => setShowNav(!showNav)}>
+        <div
+          className="relative h-[37px] w-[37px] cursor-pointer rounded-sm border border-white"
+          onClick={() => setShowNav(!showNav)}
+        >
           <div
             className={twMerge(
               "absolute left-2 top-2 w-5 origin-top-left border-b-2 border-white transition-all duration-100",
@@ -50,9 +54,9 @@ export const TopNavBar = () => {
       <div className={twMerge("absolute bottom-0 w-full translate-y-full bg-emerald-900", showNav ? "" : "hidden")}>
         <ul>
           <li>
-            <NavLink className="block p-2.5" to="/route/">
+            <AddNewRoute onClose={setShowNav} className="block p-2.5">
               Add New Route
-            </NavLink>
+            </AddNewRoute>
           </li>
         </ul>
       </div>

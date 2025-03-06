@@ -6,8 +6,8 @@ type BaseTextAreaAttributes = React.ComponentPropsWithoutRef<"textarea">;
 interface TextAreaProps extends BaseTextAreaAttributes {
   className?: string;
   id: string;
-  handleOnChange: (e: React.ChangeEvent<HTMLTextAreaElement>, id: string) => void;
-  handleOnKeyDown: (e: React.KeyboardEvent<HTMLTextAreaElement>) => void;
+  handleOnChange?: (e: React.ChangeEvent<HTMLTextAreaElement>, id: string) => void;
+  handleOnKeyDown?: (e: React.KeyboardEvent<HTMLTextAreaElement>) => void;
 }
 export const Textarea = (props: TextAreaProps) => {
   const { value, id, className, handleOnChange, handleOnKeyDown, ...rest } = props;
@@ -23,8 +23,8 @@ export const Textarea = (props: TextAreaProps) => {
           rows={1}
           name="text"
           className={twMerge(className, "text-area col-start-1 row-start-1 resize-none overflow-hidden outline-0")}
-          onChange={(e) => props.handleOnChange(e, props.id)}
-          onKeyDown={(e) => props.handleOnKeyDown(e)}
+          onChange={(e) => props.handleOnChange?.(e, props.id)}
+          onKeyDown={(e) => props.handleOnKeyDown?.(e)}
           value={props.value}
           autoFocus
         />

@@ -12,7 +12,7 @@ function App() {
         <Routes>
           <Route element={<BaseLayout />}>
             <Route index element={<HomeListView />} />
-            <Route path="route">
+            <Route path="routes">
               <Route path=":routeId" element={<RouteListView />} />
             </Route>
             <Route path="*" element={<Route404 />} />

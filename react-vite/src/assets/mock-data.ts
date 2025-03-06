@@ -3,7 +3,7 @@ export const routeList = [
     name: "route 1",
     type: "boulder",
     grade: "v4",
-    id: "0001",
+    id: "1",
     moveList: [
       {
         type: "leftHand",

@@ -1,9 +1,15 @@
-import { RxCross1 } from "react-icons/rx";
+import { FaTrashCan } from "react-icons/fa6";
 
-export const DeleteButton = ({ id, handleDelete }: { id: string; handleDelete: (id: string) => void }) => {
+export type DeleteButtonProps = React.ComponentPropsWithoutRef<"button">;
+export const DeleteButton = (props: DeleteButtonProps) => {
   return (
-    <div className="grid rounded-sm border border-white p-2 py-3" onClick={() => handleDelete(id)}>
-      <RxCross1 className="text-2xl text-emerald-950/50" />
-    </div>
+    <button
+      className="grid cursor-pointer rounded-sm border border-white p-2 py-3"
+      {...props}
+      title="delete"
+      type="submit"
+    >
+      <FaTrashCan className="text-2xl text-yellow-950/50 hover:text-yellow-950" />
+    </button>
   );
 };
