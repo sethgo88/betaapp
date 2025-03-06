@@ -1,9 +1,9 @@
 import { NavLink } from "react-router";
 import axios from "axios";
-import { ReactEventHandler, useEffect, useRef, useState } from "react";
-import { Route } from "@prisma/client";
+import { useEffect, useRef, useState } from "react";
+import { Route } from "@server/node_modules/.prisma/client";
 import { ListItem } from "./components/list-item";
-import { RxArrowDown, RxArrowUp, RxCross1, RxDropdownMenu } from "react-icons/rx";
+import { RxCross1, RxDropdownMenu } from "react-icons/rx";
 import { twMerge } from "tailwind-merge";
 import { Select } from "../../components/select/select";
 import { Input } from "../../components/input/input";

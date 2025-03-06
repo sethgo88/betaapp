@@ -1,14 +1,11 @@
-import { useEffect, useRef, useState } from "react";
-import { Input } from "../../components/input/input";
-import { Select } from "../../components/select/select";
-import { DeleteButton } from "../../components/delete-button/delete-button";
-import { Textarea } from "../../components/textarea/textarea";
-import { BrowserRouter, useNavigate, useParams } from "react-router";
-import { routeList } from "../../assets/mock-data";
-import { Route } from "@prisma/client";
+import { useEffect, useState } from "react";
+import { Input } from "@components/input/input";
+import { Select } from "@components/select/select";
+import { useNavigate, useParams } from "react-router";
+import { Route } from "@server/node_modules/.prisma/client";
 import axios from "axios";
-import { BottomNavBar } from "../../components/navbar/bottom-navbar";
-import { Modal } from "../../components/modal/modal";
+import { BottomNavBar } from "@components/navbar/bottom-navbar";
+import { Modal } from "@components/modal/modal";
 
 const routeTypes = ["sport", "boulder"] as const;
 type routeTypes = (typeof routeTypes)[number];

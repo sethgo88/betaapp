@@ -3,10 +3,6 @@
   "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
   "compilerOptions": {
     "module": "CommonJS",
-    "target": "ES6",
-    "baseUrl": ".",
-    "paths": {
-      "@components/*": [".src/components/*"]
-    }
+    "target": "ES6"
   }
 }

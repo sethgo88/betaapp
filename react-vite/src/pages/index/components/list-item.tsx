@@ -1,6 +1,5 @@
 import { twMerge } from "tailwind-merge";
 import { DeleteButton } from "../../../components/delete-button/delete-button";
-import axios from "axios";
 import { useState } from "react";
 
 export type ListItemProps = Omit<React.ComponentPropsWithoutRef<"li">, "id"> & {
