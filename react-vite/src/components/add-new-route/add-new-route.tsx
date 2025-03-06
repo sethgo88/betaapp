@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BrowserRouter, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { twMerge } from "tailwind-merge";
 
 export type AddNewRouteProps = {
