@@ -1,8 +1,15 @@
-export const DeleteButton = ({ id, handleDelete }: { id: string; handleDelete: (id: string) => void }) => {
+import { FaTrashCan } from "react-icons/fa6";
+
+export type DeleteButtonProps = React.ComponentPropsWithoutRef<"button">;
+export const DeleteButton = (props: DeleteButtonProps) => {
   return (
-    <div className="grid rounded-sm border border-white p-2 py-3" onClick={() => handleDelete(id)}>
-      <div className="col-start-1 row-start-1 w-5 rotate-45 border border-b-white"></div>
-      <div className="col-start-1 row-start-1 w-5 -rotate-45 border border-b-white"></div>
-    </div>
+    <button
+      className="grid cursor-pointer rounded-sm border border-white p-2 py-3"
+      {...props}
+      title="delete"
+      type="submit"
+    >
+      <FaTrashCan className="text-2xl text-yellow-950/50 hover:text-yellow-950" />
+    </button>
   );
 };
